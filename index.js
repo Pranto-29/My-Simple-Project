@@ -1,4 +1,4 @@
-
+  
     let favCount = 0;
     let copyCount = 0;
     let coins = 100;
