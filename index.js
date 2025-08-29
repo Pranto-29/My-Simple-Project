@@ -2,12 +2,10 @@
     let favCount = 0;
     let copyCount = 0;
     let coins = 100;
-
     const favEl = document.getElementById('fav-count');
     const copyEl = document.getElementById('copy-count');
     const coinEl = document.getElementById('coin-count');
     const historyEl = document.getElementById('call-history');
-
 
     function renderCounts() {
       favEl.textContent = favCount;
@@ -19,7 +17,6 @@
       if (historyEl.children.length === 1 && historyEl.children[0].textContent.includes('No call history')) {
         historyEl.innerHTML = '';
       }
-
       const li = document.createElement('li');
       li.className = 'p-3 bg-gray-50 rounded shadow-sm flex justify-between items-start';
       const left = document.createElement('div');
@@ -31,8 +28,6 @@
       li.appendChild(right);
       historyEl.prepend(li);
     }
-
-
     document.querySelectorAll('.card-heart').forEach(el => {
       el.addEventListener('click', function() {
         const svc = this.dataset.service;
