@@ -71,6 +71,7 @@
         addHistoryEntry(name, number);
       });
     });
+    d
     document.getElementById('clear-history').addEventListener('click', function() {
       historyEl.innerHTML = '<li class="text-pink-500">No call history yet.</li>';
     });
