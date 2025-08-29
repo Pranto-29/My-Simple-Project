@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Emergency Service Directory</title>
+  <!-- TailwindCDN + DaisyUI -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css" rel="stylesheet" />
+</head>
+<body class="bg-emerald-50 min-h-screen">
+
+  <!-- Navber -->
+  <nav class="bg-white shadow-sm sticky top-0 z-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center gap-3">
+          <img src="assets/logo.png" alt="logo" class="w-9 h-9 rounded-full" />
+          <div>
+            <h1 class="font-bold text-lg">Emergency Service</h1>
+            <!-- <p class="text-xs text-gray-500 -mt-1">Government Emergency Services at Your Fingertip</p> -->
+          </div>
+        </div>
+        <div class="flex items-center gap-6">
+          <div class="flex items-center gap-2 bg-green-200 text-white rounded-full py-2 px-5 shadow-lg hover:shadow-xl transition-all duration-200 justify-center">
+            <span class="text-lg">❤️</span>
+            <span id="fav-count" class="font-medium">0</span>
+          </div>
+          <div class="flex items-center gap-2 bg-green-200 text-black rounded-full py-2 px-5 shadow-lg hover:shadow-xl transition-all duration-200 justify-center">
+            <span class="text-lg">⭐</span>
+            <span id="coin-count" class="font-medium">100</span>
+          </div>
+         <div class="flex items-center gap-2 bg-green-500 text-white rounded-full py-2 px-5 shadow-lg hover:shadow-xl transition-all duration-500 justify-center">
+        <span class="text-lg">📋</span>
+        <span id="copy-count" class="font-semibold">0 Copy</span>
+        </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="bg-gradient-to-r from-emerald-700 to-emerald-500 text-white py-12">
+    <div class="max-w-6xl mx-auto text-center px-4">
+      <img src="assets/logo.png" alt="center logo" class="mx-auto mb-4 rounded-full bg-white p-2 w-18 h-18">
+      <h2 class="text-3xl font-bold">Emergency Service Directory</h2>
+      <p class="mt-2 opacity-90">Government Emergency Services at Your Fingertips — দ্রুত তথ্য, নিরাপদ ব্যবস্থা</p>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-4 gap-6">
+
+    <section class="lg:col-span-3">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg shadow-sm p-4">
+          <div class="flex justify-between items-start">
+            <div class="flex items-center gap-3">
+              <div class="icon-box">
+                🚓
+              </div>
+              <div>
+                <div class="text-sm text-gray-600">পুলিশ</div>
+                <div class="font-semibold">Police</div>
+              </div>
+            </div>
+            <div class="card-heart text-red-500" data-service="Police" data-number="999" title="Add to favorites">💗</div>
+          </div>
+
+          <div class="mt-4">
+            <div class="text-3xl font-bold">999</div>
+            <div class="mt-3 flex gap-2">
+              <button class="copy-btn btn btn-outline btn-sm flex-1" data-number="999">📋 Copy</button>
+              <button class="call-btn btn btn-success btn-sm flex-1" data-name="Police" data-number="999">📞 Call</button>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="bg-white rounded-lg shadow-sm p-4">
+          <div class="flex justify-between items-start">
+            <div class="flex items-center gap-3">
+              <div class="icon-box">🔥</div>
+              <div>
+                <div class="text-sm text-gray-600">ফায়ার সার্ভিস</div>
+                <div class="font-semibold">Fire Service</div>
+              </div>
+            </div>
+            <div class="card-heart text-red-500" data-service="Fire Service" data-number="199" title="Add to favorites">💗</div>
+          </div>
+
+          <div class="mt-4">
+            <div class="text-3xl font-bold">199</div>
+            <div class="mt-3 flex gap-2">
+              <button class="copy-btn btn btn-outline btn-sm" data-number="199">📋 Copy</button>
+              <button class="call-btn btn btn-success btn-sm" data-name="Fire Service" data-number="199">📞 Call</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-sm p-4">
+          <div class="flex justify-between items-start">
+            <div class="flex items-center gap-3">
+              <div class="icon-box">🚑</div>
+              <div>
+                <div class="text-sm text-gray-600">ন্যাশনাল ইমার্জেন্সি</div>
+                <div class="font-semibold">National Emergency</div>
+              </div>
+            </div>
+            <div class="card-heart text-red-500" data-service="National Emergency" data-number="999" title="Add to favorites">💗</div>
+          </div>
+
+          <div class="mt-4">
+            <div class="text-3xl font-bold">999</div>
+            <div class="mt-3 flex gap-2">
+              <button class="copy-btn btn btn-outline btn-sm" data-number="999">📋 Copy</button>
+              <button class="call-btn btn btn-success btn-sm" data-name="National Emergency" data-number="999">📞 Call</button>
+            </div>
+          </div>
+        </div>
+
+    
+        <div class="bg-white rounded-lg shadow-sm p-4">
+          <div class="flex justify-between items-start">
+            <div class="flex items-center gap-3">
+              <div class="icon-box">🚆</div>
+              <div>
+                <div class="text-sm text-gray-600">রেলওয়ে হেল্পলাইন</div>
+                <div class="font-semibold">Railway Helpline</div>
+              </div>
+            </div>
+            <div class="card-heart text-red-500" data-service="Railway Helpline" data-number="151" title="Add to favorites">💗</div>
+          </div>
+
+          <div class="mt-4">
+            <div class="text-3xl font-bold">151</div>
+            <div class="mt-3 flex gap-2">
+              <button class="copy-btn btn btn-outline btn-sm" data-number="151">📋 Copy</button>
+              <button class="call-btn btn btn-success btn-sm" data-name="Railway Helpline" data-number="151">📞 Call</button>
+            </div>
+          </div>
+        </div>
+
+    
+        <div class="bg-white rounded-lg shadow-sm p-4">
+          <div class="flex justify-between items-start">
+            <div class="flex items-center gap-3">
+              <div class="icon-box">🛂</div>
+              <div>
+                <div class="text-sm text-gray-600">অ্যান্টি-কারাপশন হেল্পলাইন</div>
+                <div class="font-semibold">Anti-Corruption</div>
+              </div>
+            </div>
+            <div class="card-heart text-red-500" data-service="Anti-Corruption" data-number="999" title="Add to favorites">💗</div>
+          </div>
+
+          <div class="mt-4">
+            <div class="text-3xl font-bold">999</div>
+            <div class="mt-3 flex gap-2">
+              <button class="copy-btn btn btn-outline btn-sm" data-number="999">📋 Copy</button>
+              <button class="call-btn btn btn-success btn-sm" data-name="Anti-Corruption" data-number="999">📞 Call</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-sm p-4">
+          <div class="flex justify-between items-start">
+            <div class="flex items-center gap-3">
+              <div class="icon-box">🏥</div>
+              <div>
+                <div class="text-sm text-gray-600">হাসপাতাল হেল্পলাইন</div>
+                <div class="font-semibold">Public Helpline</div>
+              </div>
+            </div>
+            <div class="card-heart text-red-500" data-service="Public Helpline" data-number="16430" title="Add to favorites">💗</div>
+          </div>
+          <div class="mt-4">
+            <div class="text-3xl font-bold">999</div>
+            <div class="mt-3 flex gap-2">
+              <button class="copy-btn btn btn-outline btn-sm" data-number="16430">📋 Copy</button>
+              <button class="call-btn btn btn-success btn-sm" data-name="Public Helpline" data-number="16430">📞 Call</button>
+            </div>
+          </div>
+        </div>
+         <div class="bg-white rounded-lg shadow-sm p-4">
+          <div class="flex justify-between items-start">
+            <div class="flex items-center gap-3">
+              <div class="icon-box">📞</div>
+              <div>
+                <div class="text-sm text-gray-600">জনাল হেল্পলাইন</div>
+                <div class="font-semibold">Public Helpline</div>
+              </div>
+            </div>
+            <div class="card-heart text-red-500" data-service="Public Helpline" data-number="16430" title="Add to favorites">💗</div>
+          </div>
+          <div class="mt-4">
+            <div class="text-3xl font-bold">16430</div>
+            <div class="mt-3 flex gap-2">
+              <button class="copy-btn btn btn-outline btn-sm" data-number="16430">📋 Copy</button>
+              <button class="call-btn btn btn-success btn-sm" data-name="Public Helpline" data-number="16430">📞 Call</button>
+            </div>
+          </div>
+        </div>
+         <div class="bg-white rounded-lg shadow-sm p-4">
+          <div class="flex justify-between items-start">
+            <div class="flex items-center gap-3">
+              <div class="icon-box">📚</div>
+              <div>
+                <div class="text-sm text-gray-600">শিক্ষাবার্তা হেল্পলাইন</div>
+                <div class="font-semibold">Public Helpline</div>
+              </div>
+            </div>
+            <div class="card-heart text-red-500" data-service="Public Helpline" data-number="16430" title="Add to favorites">💗</div>
+          </div>
+          <div class="mt-4">
+            <div class="text-3xl font-bold">999</div>
+            <div class="mt-3 flex gap-2">
+              <button class="copy-btn btn btn-outline btn-sm" data-number="16430">📋 Copy</button>
+              <button class="call-btn btn btn-success btn-sm" data-name="Public Helpline" data-number="16430">📞 Call</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-sm p-4">
+          <div class="flex justify-between items-start">
+            <div class="flex items-center gap-3">
+              <div class="icon-box">🛡️</div>
+              <div>
+                <div class="text-sm text-gray-600">সেনাবাহিনী হেল্পলাইন</div>
+                <div class="font-semibold">Public Helpline</div>
+              </div>
+            </div>
+            <div class="card-heart text-red-500" data-service="Public Helpline" data-number="16430" title="Add to favorites">💗</div>
+          </div>
+          <div class="mt-4">
+            <div class="text-3xl font-bold">999</div>
+            <div class="mt-3 flex gap-2">
+              <button class="copy-btn btn btn-outline btn-sm" data-number="16430">📋 Copy</button>
+              <button class="call-btn btn btn-success btn-sm" data-name="Public Helpline" data-number="16430">📞 Call</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Right Section -->
+    <aside class="bg-blue-300 p-4 rounded-lg shadow-sm">
+      <div class="flex items-center justify-between mb-3">
+        <div class="flex items-center gap-2">
+          <span class="text-2xl">📞</span>
+          <h3 class="font-bold text-lg">Call History</h3>
+        </div>
+        <button id="clear-history" class="btn btn-ghost btn-sm">Clear</button>
+      </div>
+
+      <ul id="call-history" class="space-y-3 text-sm">
+        <li class="text-gray-500">No call history yet.</li>
+      </ul>
+    </aside>
+  </main>
+
+  <script src="index.js"></script>
+  </body>
