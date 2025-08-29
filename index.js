@@ -57,14 +57,10 @@
         }
       });
     });
-
-
     document.querySelectorAll('.call-btn').forEach(btn => {
       btn.addEventListener('click', function() {
         const name = this.dataset.name;
         const number = this.dataset.number;
-
-
         if (coins < 20) {
           alert('Not enough coins to make this call. Each call costs 20 coins.');
           return;
